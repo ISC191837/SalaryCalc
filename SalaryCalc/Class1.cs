@@ -25,6 +25,18 @@ namespace SalaryCalc
             return result;
         }
 
+        public string getTaxString(float salary)
+        {
+            if(hasTax(salary))
+            {
+                return "15%";
+            }
+            else
+            {
+                return "10%";
+            }
+        }
+
         public float getTax(float salary)
         {
             float result;
