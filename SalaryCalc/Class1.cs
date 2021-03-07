@@ -25,6 +25,17 @@ namespace SalaryCalc
             return result;
         }
 
+        public int getExtraHours(int hoursWorked)
+        {
+            if(hoursWorked > 30)
+            {
+                return hoursWorked - 30;
+            }
+            else
+            {
+                return 0;
+            }
+        }
         public string getTaxString(float salary)
         {
             if(hasTax(salary))
@@ -51,6 +62,7 @@ namespace SalaryCalc
 
             return result;
         }
+
         
         public bool hasTax(float salary)
         {
@@ -59,7 +71,7 @@ namespace SalaryCalc
                 return true;
             }
 
-            return true;
+            return false;
         }
     }
 }
